@@ -1,0 +1,13 @@
+# Used when the whole project is uploaded into Hostinger's public_html.
+# Sends every request into the public/ folder, so .env, storage/ and the
+# app code are never reachable from the web.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
