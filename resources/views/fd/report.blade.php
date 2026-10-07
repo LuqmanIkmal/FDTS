@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reports - Fixed Deposit Tracking System</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/vv-favicon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -122,7 +123,7 @@
 
             <div class="print-report">
                 <div class="print-header">
-                    <img src="{{ asset('images/Logo.png') }}" alt="Logo" class="print-logo" onerror="this.style.display='none'">
+                    <img src="{{ asset('images/vv-logo.png') }}" alt="Logo" class="print-logo" onerror="this.style.display='none'">
                     <h1 class="print-title">FIXED DEPOSIT REPORT</h1>
                 </div>
 

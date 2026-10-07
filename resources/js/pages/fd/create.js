@@ -217,7 +217,7 @@ document.getElementById('createFDForm').addEventListener('submit', function(e) {
         if (!field) return;
         const err = document.createElement('div');
         err.className = 'fd-field-error';
-        err.style.cssText = 'color:#e74c3c; font-size:13px; margin-top:4px;';
+        err.style.cssText = 'color:#d92d20; font-size:13px; margin-top:4px;';
         err.textContent = message;
 
         // Use .closest() to find the main field container instead of the direct parent

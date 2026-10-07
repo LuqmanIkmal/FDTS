@@ -1,3 +1,5 @@
+@import '../../theme.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f5f5f5;
+    background: var(--vv-page);
     display: flex;
     min-height: 100vh;
 }
@@ -31,7 +33,7 @@ body {
 
 .header h1 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-weight: 600;
 }
 
@@ -47,20 +49,20 @@ body {
 
 .user-name {
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-size: 16px;
 }
 
 .user-role {
     font-size: 13px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
 }
 
 .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: #d5d9df;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,7 +111,7 @@ body {
 .search-bar input {
     width: 100%;
     padding: 15px 50px 15px 20px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     border-radius: 50px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
@@ -118,7 +120,7 @@ body {
 
 .search-bar input:focus {
     outline: none;
-    border-color: #1a4d5e;
+    border-color: var(--vv-ink);
 }
 
 .search-icon {
@@ -126,7 +128,7 @@ body {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     font-size: 20px;
 }
 
@@ -151,17 +153,17 @@ th {
     padding: 20px;
     text-align: center;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-size: 15px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid var(--vv-line);
 }
 
 td {
     padding: 20px;
     text-align: center;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-size: 14px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #eef0f3;
 }
 
 tbody tr:hover {
@@ -169,13 +171,15 @@ tbody tr:hover {
 }
 
 .account-link {
-    color: #3498db;
+    color: var(--vv-text);
     text-decoration: underline;
     cursor: pointer;
+    text-decoration-color: #b8bec8;
 }
 
 .account-link:hover {
-    color: #2980b9;
+    color: var(--vv-red);
+    text-decoration-color: var(--vv-red);
 }
 
 .status {
@@ -187,18 +191,18 @@ tbody tr:hover {
 }
 
 .status.pending {
-    background: #ffe5e5;
-    color: #c0392b;
+    background: #fdecee;
+    color: #a51a28;
 }
 
 .status.ongoing {
-    background: #fff9e5;
-    color: #d68910;
+    background: #fff5dc;
+    color: #946000;
 }
 
 .status.matured {
-    background: #e5f5f0;
-    color: #0c7a5a;
+    background: #e6f4ec;
+    color: #17663f;
 }
 
 .action-btn {
@@ -225,12 +229,12 @@ tbody tr:hover {
 }
 
 .action-icon.update {
-    color: #3498db;
+    color: var(--vv-red);
 }
 
 .action-label {
     font-size: 11px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     font-weight: 500;
 }
 
@@ -245,7 +249,7 @@ tbody tr:hover {
 .empty-state {
     text-align: center;
     padding: 60px 20px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
 }
 
 .empty-state-icon {
@@ -340,7 +344,7 @@ tbody tr:hover {
 }
 
 .notification.success {
-    background: #80cbc4;
+    background: #e6f4ec;
 }
 
 /* ========================================
@@ -351,7 +355,7 @@ tbody tr:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    padding: 20px 0;
+    padding: 20px 24px; /* keeps the text and buttons off the edge of the card */
 }
 
 .pagination-info {
@@ -367,7 +371,7 @@ tbody tr:hover {
 
 .pagination-btn {
     padding: 8px 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #d5d9df;
     background: white;
     color: #333;
     cursor: pointer;
@@ -382,15 +386,15 @@ tbody tr:hover {
 }
 
 .pagination-btn:hover:not(.disabled) {
-    background: #667eea;
+    background: var(--vv-ink);
     color: white;
-    border-color: #667eea;
+    border-color: var(--vv-ink);
 }
 
 .pagination-btn.active {
-    background: #667eea;
+    background: var(--vv-ink);
     color: white;
-    border-color: #667eea;
+    border-color: var(--vv-ink);
 }
 
 .pagination-btn.disabled {
@@ -420,6 +424,31 @@ tbody tr:hover {
 
     .pagination {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+/* Phones: "Previous" and "Next" share one row under the page numbers */
+@media (max-width: 600px) {
+    .pagination-container {
+        margin-top: 8px;
+        padding: 16px 12px;
+        gap: 12px;
+    }
+
+    .page-numbers {
+        order: -1;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pagination-btn.prev,
+    .pagination-btn.next {
+        flex: 1;
+        max-width: 160px;
         justify-content: center;
     }
 }

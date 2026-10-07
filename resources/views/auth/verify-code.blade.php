@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verify Code - Fixed Deposit Tracking System</title>
+  <link rel="icon" type="image/png" href="{{ asset('images/vv-favicon.png') }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +22,11 @@
     <!-- LEFT PANEL -->
     <div class="left-panel">
       <div class="logo">
-        <img src="{{ asset('images/Logo.png') }}" alt="Infra Desa Johor Logo">
+        <img src="{{ asset('images/vv-logo-white.png') }}" alt="Vista Velocity">
       </div>
 
       <div class="system-title">
-        <h1>Fixed<br>Deposit<br>Tracking<br>System</h1>
+        <h1>Fixed <br>Deposit <br>Tracking <br>System</h1>
       </div>
     </div>
 
@@ -57,13 +58,13 @@
               <div class="helper-text">Please enter the verification code sent to your email.</div>
               
               <!-- Countdown Timer -->
-              <div class="helper-text" id="timer" style="color: #1a4d5e; font-weight: 600; margin-top: 15px;">
+              <div class="helper-text" id="timer" style="color: #14171c; font-weight: 600; margin-top: 15px;">
                 ⏱️ Code expires in: <span id="countdown">5:00</span>
               </div>
               
               <!-- Resend Link -->
               <div class="helper-text" style="margin-top: 10px;">
-                <a href="{{ route('password.forgot') }}" style="color: #ff9a5a; text-decoration: underline; font-weight: 600;">📧 Request New Code</a>
+                <a href="{{ route('password.forgot') }}" style="color: #bf1e2e; text-decoration: underline; font-weight: 600;">📧 Request New Code</a>
               </div>
             </div>
           </div>

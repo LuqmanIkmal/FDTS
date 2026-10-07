@@ -27,7 +27,7 @@ function updateTimer() {
   if (timeLeft <= 0) {
     const timerElement = document.getElementById('timer');
     if (timerElement) {
-      timerElement.style.color = '#e74c3c';
+      timerElement.style.color = '#d92d20';
       timerElement.innerHTML = '<strong>⏰ Code EXPIRED - Request a new one</strong>';
     }
     if (otpInput) {

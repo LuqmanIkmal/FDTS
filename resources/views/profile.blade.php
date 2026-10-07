@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Fixed Deposit Tracking System</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/vv-favicon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -102,7 +103,7 @@
                                     <input type="file" id="profilePicture" name="profilePicture" class="file-input" accept="*" onchange="handleFileSelect(event)">
                                     <span class="file-info">JPEG, PNG.</span>
                                 </div>
-                                <div id="pictureError" style="display:none; color:#e74c3c; font-size:13px; margin-top:4px;"></div>
+                                <div id="pictureError" style="display:none; color:#d92d20; font-size:13px; margin-top:4px;"></div>
                             </div>
                             
                             <!-- Hidden Re-confirm Password Field -->
@@ -114,7 +115,7 @@
                                         <img src="{{ asset('images/icons/eyeDisable.png') }}" alt="Show password" id="confirmPassword-toggle-icon">
                                     </button>
                                 </div>
-                                <div id="passwordError" style="display:none; color:#e74c3c; font-size:13px; margin-top:4px;"></div>
+                                <div id="passwordError" style="display:none; color:#d92d20; font-size:13px; margin-top:4px;"></div>
                             </div>
 
                             <div class="info-group full-width">
@@ -136,7 +137,7 @@
     <div class="success-message" id="successMessage"></div>
 
     <!-- Error Toast (same position/style as success message but red) -->
-    <div class="success-message" id="errorToast" style="background: #e74c3c;"></div>
+    <div class="success-message" id="errorToast" style="background: #d92d20;"></div>
 
     <!-- Update Confirmation Modal -->
     <div class="modal-overlay" id="updateModal">

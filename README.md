@@ -45,6 +45,7 @@ The Blade views hold only HTML. Their styles and scripts live under `resources/`
 |---|---|
 | `resources/css/pages/<view>.css`, `resources/js/pages/<view>.js` | The view with the same path, e.g. `fd/index.css` and `fd/index.js` belong to `resources/views/fd/index.blade.php` |
 | `resources/css/app.css`, `resources/js/app.js` | Every signed-in page (sidebar styles and menu toggle) |
+| `resources/css/theme.css` | The Vista Velocity colours (logo red and black). Every stylesheet imports it, so a colour changed there changes on every page |
 | `resources/images/` | Images referenced from CSS (login and sign-up backgrounds) |
 
 - Each view loads its files with `@vite([...])` in its `<head>`.
@@ -54,6 +55,14 @@ The Blade views hold only HTML. Their styles and scripts live under `resources/`
   Add new ones to that list, otherwise the click does nothing.
 - A new file under `resources/css/pages` or `resources/js/pages` is picked up automatically; add it to the view's `@vite([...])` list.
 - Images used with `asset('images/...')` in Blade stay in `public/images/`.
+- The logo files are in `public/images/`: `vv-logo.png` (for light backgrounds and print), `vv-logo-white.png` (for dark backgrounds),
+  `vv-mark.png` / `vv-mark-white.png` (the VV monogram alone) and `vv-favicon.png` (the browser-tab icon).
+  Browsers keep images for a long time: when you replace one, give it a new file name so everyone sees the new picture.
+- **Small screens and the sidebar.** The menu button in the header opens and closes the sidebar. On screens wider than
+  1024px the sidebar sits beside the page and the choice is remembered; at 1024px and below it slides over the page.
+  That limit is written in two places that must match: `resources/css/app.css` and `resources/js/app.js`.
+  The rules every signed-in page shares (sidebar, header, spacing, tables that scroll sideways, pop-ups) are at the end of
+  `resources/css/app.css`; a page's own tablet and phone rules are at the end of its stylesheet under "Narrow screens".
 
 ## Deploy to Hostinger (Business plan)
 

@@ -1,1 +1,0 @@
-window.toggleDropdown=function(e,t){let n=document.getElementById(e);n.classList.contains(`show`)?(n.classList.remove(`show`),t.classList.remove(`open`)):(n.classList.add(`show`),t.classList.add(`open`))};

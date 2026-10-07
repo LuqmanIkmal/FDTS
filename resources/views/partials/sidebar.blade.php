@@ -5,17 +5,22 @@
     $bankMenuOpen = request()->routeIs("banks.list", "banks.create");
 @endphp
 <!-- Sidebar Component -->
+<script>
+    // Keep the sidebar closed from the first paint if it was closed on the last page (wide screens)
+    try {
+        if (localStorage.getItem('sidebarCollapsed') === '1') document.documentElement.classList.add('sidebar-collapsed');
+    } catch (e) {}
+</script>
 
-<div class="sidebar">
-    <div class="logo-section">
-        <div class="logo-icon">
-            <img src="{{ asset('images/LogoWhite.png') }}" alt="Logo">
-        </div>
-    </div>
-    
-    <div class="system-text">
-        <p>Fixed Deposits<br>Tracking System</p>
-    </div>
+<div class="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+<div class="sidebar" id="sidebar">
+    <button type="button" class="sidebar-close" onclick="closeSidebar()" aria-label="Close the menu">&times;</button>
+    <a href="{{ route('dashboard') }}" class="brand">
+        <img src="{{ asset('images/vv-mark-white.png') }}" alt="Vista Velocity" class="brand-mark">
+        <span class="brand-name">Vista Velocity</span>
+        <span class="brand-system">Fixed Deposit Tracking System</span>
+    </a>
 
     <nav class="nav-menu">
         <a href="{{ route('dashboard') }}" class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">

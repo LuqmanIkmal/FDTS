@@ -1,3 +1,5 @@
+@import '../../theme.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f5f5f5;
+    background: var(--vv-page);
     display: flex;
     min-height: 100vh;
 }
@@ -29,7 +31,7 @@ body {
 
 .header h1 {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-weight: 600;
 }
 
@@ -40,14 +42,14 @@ body {
 }
 
 .user-info { text-align: right; }
-.user-name { font-weight: 600; color: #2c3e50; font-size: 16px; }
-.user-role { font-size: 13px; color: #7f8c8d; }
+.user-name { font-weight: 600; color: var(--vv-text); font-size: 16px; }
+.user-role { font-size: 13px; color: var(--vv-text-muted); }
 
 .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: #d5d9df;
 }
 
 .user-avatar img {
@@ -64,13 +66,13 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
 }
 
-.back-button:hover { color: #2c3e50; }
+.back-button:hover { color: var(--vv-text); }
 .back-icon { font-size: 24px; }
 
 .page-content {
@@ -110,16 +112,16 @@ body {
     background: #f8f9fa;
     border-radius: 10px;
     padding: 20px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--vv-line);
 }
 
 .section-title {
     font-size: 14px;
     font-weight: 600;
-    color: #1a4d5e;
+    color: var(--vv-ink);
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #1a4d5e;
+    border-bottom: 2px solid var(--vv-red);
 }
 
 .form-row {
@@ -133,7 +135,7 @@ body {
 .form-row label {
     font-size: 13px;
     font-weight: 500;
-    color: #2c3e50;
+    color: var(--vv-text);
     width: 260px;
     flex-shrink: 0;
 }
@@ -142,7 +144,7 @@ body {
 .form-row select {
     flex: 1;
     padding: 8px 12px;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #d5d9df;
     border-radius: 6px;
     font-size: 13px;
     font-family: 'Inter', sans-serif;
@@ -152,11 +154,11 @@ body {
 .form-row input:focus,
 .form-row select:focus {
     outline: none;
-    border-color: #1a4d5e;
+    border-color: var(--vv-ink);
 }
 
 .form-row input[readonly] {
-    background-color: #f0f0f0;
+    background-color: #eef0f3;
     color: #666;
 }
 
@@ -176,7 +178,7 @@ body {
 .radio-item input[type="radio"] {
     width: 18px;
     height: 18px;
-    accent-color: #1a4d5e;
+    accent-color: var(--vv-red);
     cursor: pointer;
 }
 
@@ -187,7 +189,7 @@ body {
 }
 
 .calculate-link {
-    color: #0066cc;
+    color: var(--vv-red);
     text-decoration: none;
     font-size: 12px;
     font-weight: 500;
@@ -218,40 +220,40 @@ body {
     gap: 8px;
     padding: 8px 12px;
     background: white;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #d5d9df;
     border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
 }
 
-.file-upload-btn:hover { border-color: #1a4d5e; }
+.file-upload-btn:hover { border-color: var(--vv-ink); }
 .file-upload-btn input[type="file"] { display: none; }
-.file-icon { font-size: 18px; color: #7f8c8d; }
-.file-name { color: #2c3e50; font-size: 13px; }
-.file-info { font-size: 11px; color: #7f8c8d; margin-top: 4px; }
+.file-icon { font-size: 18px; color: var(--vv-text-muted); }
+.file-name { color: var(--vv-text); font-size: 13px; }
+.file-info { font-size: 11px; color: var(--vv-text-muted); margin-top: 4px; }
 
 .conditional-fields {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px dashed #d0d0d0;
+    border-top: 1px dashed #d5d9df;
 }
 
 /* Reinvest Fields */
 .reinvest-fields {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px dashed #d0d0d0;
+    border-top: 1px dashed #d5d9df;
 }
 
 /* Info Messages */
 .info-message {
-    background: #e3f2fd;
-    border-left: 4px solid #1976d2;
+    background: #eef3f9;
+    border-left: 4px solid #3a6ea5;
     padding: 12px 15px;
     margin-bottom: 15px;
     border-radius: 4px;
     font-size: 13px;
-    color: #1565c0;
+    color: #2b527c;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -279,7 +281,7 @@ body {
     gap: 15px;
     margin-top: 25px;
     padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--vv-line);
 }
 
 .reminder-item {
@@ -289,7 +291,7 @@ body {
     max-width: 500px;
 }
 
-.reminder-label { font-size: 13px; color: #2c3e50; }
+.reminder-label { font-size: 13px; color: var(--vv-text); }
 
 .toggle-switch {
     position: relative;
@@ -327,7 +329,7 @@ body {
     border-radius: 50%;
 }
 
-input:checked + .slider { background-color: #1a4d5e; }
+input:checked + .slider { background-color: var(--vv-red); }
 input:checked + .slider:before { transform: translateX(24px); }
 
 .form-actions {
@@ -349,14 +351,14 @@ input:checked + .slider:before { transform: translateX(24px); }
 }
 
 .btn-update {
-    background: #1a4d5e;
+    background: var(--vv-red);
     color: white;
 }
 
 .btn-update:hover {
-    background: #153d4a;
+    background: var(--vv-red-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(26, 77, 94, 0.3);
+    box-shadow: 0 4px 8px rgba(191, 30, 46, 0.3);
 }
 
 .notification {
@@ -390,8 +392,8 @@ input:checked + .slider:before { transform: translateX(24px); }
     to { transform: translateX(-50%) translateY(-20px); opacity: 0; }
 }
 
-.notification.success { background: #80cbc4; }
-.notification.error { background: #e74c3c; }
+.notification.success { background: #e6f4ec; }
+.notification.error { background: #d92d20; }
 
 /* Modal Styles */
 .modal-overlay {
@@ -427,7 +429,7 @@ input:checked + .slider:before { transform: translateX(24px); }
 
 .modal-message {
     font-size: 18px;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-bottom: 30px;
     font-weight: 600;
 }
@@ -450,21 +452,21 @@ input:checked + .slider:before { transform: translateX(24px); }
 }
 
 .modal-btn-no {
-    background: #95a5a6;
+    background: #8b919b;
     color: white;
 }
 
 .modal-btn-no:hover {
-    background: #7f8c8d;
+    background: var(--vv-text-muted);
 }
 
 .modal-btn-yes {
-    background: #1a4d5e;
+    background: var(--vv-red);
     color: white;
 }
 
 .modal-btn-yes:hover {
-    background: #153d4a;
+    background: var(--vv-red-dark);
 }
 
 .modal-close {
@@ -472,17 +474,17 @@ input:checked + .slider:before { transform: translateX(24px); }
     top: 15px;
     right: 15px;
     font-size: 24px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     cursor: pointer;
     background: none;
     border: none;
 }
 
-.modal-close:hover { color: #2c3e50; }
+.modal-close:hover { color: var(--vv-text); }
 
 .modal-title {
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
@@ -493,7 +495,7 @@ input:checked + .slider:before { transform: translateX(24px); }
 .calculation-result label {
     display: block;
     font-size: 13px;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-bottom: 5px;
     font-weight: 500;
 }
@@ -501,7 +503,7 @@ input:checked + .slider:before { transform: translateX(24px); }
 .calculation-result input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #d5d9df;
     border-radius: 6px;
     font-size: 14px;
     background: #f8f9fa;
@@ -550,4 +552,112 @@ input:checked + .slider:before { transform: translateX(24px); }
 .alert-error-inline::before {
     content: "⚠️";
     font-size: 18px;
+}
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+/* Two fields side by side inside a section */
+.two-col {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 15px;
+}
+
+/* minmax(0, ...) lets a column get narrower than its widest field */
+.section-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .section-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Fields may shrink with their column instead of pushing the page wider */
+.form-row input,
+.form-row select,
+.form-row .form-value,
+.input-with-link,
+.file-upload-wrapper,
+.file-display,
+.file-display-box {
+    min-width: 0;
+}
+
+.radio-group,
+.radio-display {
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+
+/* "Calculate" stays at the right end of its field at any width (it was pushed 480px from the left) */
+.calculate-link {
+    width: fit-content;
+    margin-left: auto;
+}
+
+/* small laptops: narrower labels leave room for the fields */
+@media (max-width: 1300px) {
+    .form-row label {
+        width: 190px;
+    }
+}
+
+@media (max-width: 900px) {
+    .two-col {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 16px 12px;
+    }
+
+    .section-box {
+        padding: 16px 14px;
+    }
+
+    .section-grid {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    /* label above its field, field as wide as the section */
+    .form-row label {
+        width: 100%;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row .form-value,
+    .input-with-link,
+    .radio-group,
+    .radio-display,
+    .file-upload-wrapper,
+    .file-display {
+        width: 100%;
+        flex: none;
+    }
+
+    .radio-item label {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .reminder-item {
+        max-width: none;
+        gap: 12px;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .form-actions .btn {
+        flex: 1 1 150px;
+        padding: 12px 16px;
+    }
 }

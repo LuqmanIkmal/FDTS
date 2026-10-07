@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Bank - Fixed Deposit Tracking System</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/vv-favicon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,7 +41,7 @@
                         <input type="text" id="bankName" name="bankName" 
                                value="{{ $bank->bank_name }}" 
                                disabled>
-                        <small style="color: #7f8c8d; font-size: 12px; display: block; margin-top: 5px;">
+                        <small style="color: #6b7280; font-size: 12px; display: block; margin-top: 5px;">
                             * Bank name cannot be changed
                         </small>
                     </div>

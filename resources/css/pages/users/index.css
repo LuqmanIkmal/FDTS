@@ -1,3 +1,5 @@
+@import '../../theme.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f5f5f5;
+    background: var(--vv-page);
     display: flex;
     min-height: 100vh;
 }
@@ -29,7 +31,7 @@ body {
 
 .header h1 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-weight: 600;
 }
 
@@ -45,20 +47,20 @@ body {
 
 .user-name {
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-size: 16px;
 }
 
 .user-role {
     font-size: 13px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
 }
 
 .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: #d5d9df;
 }
 
 .user-avatar img {
@@ -86,7 +88,7 @@ body {
 .search-input {
     width: 100%;
     padding: 10px 50px 15px 20px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     border-radius: 10px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
@@ -95,7 +97,7 @@ body {
 
 .search-input:focus {
     outline: none;
-    border-color: #003f5c;
+    border-color: var(--vv-ink);
 }
 
 .search-input::placeholder {
@@ -109,7 +111,7 @@ body {
     transform: translateY(-50%);
     width: 35px;
     height: 35px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     pointer-events: none;
 }
 
@@ -133,17 +135,17 @@ th {
     padding: 25px 20px;
     text-align: center;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-size: 16px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid var(--vv-line);
 }
 
 td {
     padding: 25px 20px;
     text-align: center;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-size: 15px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #eef0f3;
 }
 
 tbody tr:hover {
@@ -159,13 +161,13 @@ tbody tr:hover {
 }
 
 .status.active {
-    background: #e5f5f0;
-    color: #0c7a5a;
+    background: #e6f4ec;
+    color: #17663f;
 }
 
 .status.inactive {
-    background: #ffe5e5;
-    color: #c0392b;
+    background: #fdecee;
+    color: #a51a28;
 }
 
 .action-btn {
@@ -192,12 +194,12 @@ tbody tr:hover {
 }
 
 .action-icon.update {
-    color: #3498db;
+    color: var(--vv-red);
 }
 
 .action-label {
     font-size: 11px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     font-weight: 500;
 }
 
@@ -211,7 +213,7 @@ tbody tr:hover {
 .no-data {
     text-align: center;
     padding: 60px 20px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     font-size: 16px;
 }
 
@@ -220,7 +222,7 @@ tbody tr:hover {
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    background: #80cbc4;
+    background: #e6f4ec;
     color: white;
     padding: 15px 40px;
     border-radius: 8px;
@@ -293,14 +295,14 @@ tbody tr:hover {
 .modal-header {
     background: white;
     padding: 30px 40px 20px;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #eef0f3;
     position: relative;
 }
 
 .modal-title {
     font-size: 28px;
     font-weight: 700;
-    color: #ff8c42;
+    color: var(--vv-ink);
     text-align: center;
     margin-bottom: 10px;
 }
@@ -310,7 +312,7 @@ tbody tr:hover {
     top: 20px;
     right: 30px;
     font-size: 32px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     cursor: pointer;
     background: none;
     border: none;
@@ -324,7 +326,7 @@ tbody tr:hover {
 }
 
 .close-btn:hover {
-    color: #2c3e50;
+    color: var(--vv-text);
 }
 
 .modal-body {
@@ -347,12 +349,12 @@ tbody tr:hover {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: #d5d9df;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     overflow: hidden;
 }
 
@@ -364,7 +366,7 @@ tbody tr:hover {
 
 .profile-label {
     font-size: 14px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
     margin-bottom: 5px;
 }
 
@@ -387,18 +389,18 @@ tbody tr:hover {
 .form-label {
     font-size: 14px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-bottom: 8px;
 }
 
 .form-input {
     padding: 12px 16px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     border-radius: 8px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
-    color: #2c3e50;
-    background: #f5f5f5;
+    color: var(--vv-text);
+    background: var(--vv-page);
     transition: all 0.3s ease;
 }
 
@@ -414,16 +416,16 @@ tbody tr:hover {
 
 .form-input:not(:disabled):focus {
     outline: none;
-    border-color: #003f5c;
+    border-color: var(--vv-ink);
 }
 
 .form-select {
     padding: 12px 16px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     border-radius: 8px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
-    color: #2c3e50;
+    color: var(--vv-text);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -431,7 +433,7 @@ tbody tr:hover {
 
 .form-select:focus {
     outline: none;
-    border-color: #003f5c;
+    border-color: var(--vv-ink);
 }
 
 .form-select:disabled {
@@ -453,9 +455,9 @@ tbody tr:hover {
     padding: 8px 15px;
     text-align: left;
     background: white;
-    color: #2c3e50;
+    color: var(--vv-text);
     border-radius: 8px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -463,14 +465,14 @@ tbody tr:hover {
 }
 
 .file-upload-btn:hover {
-    border-color: #003f5c;
+    border-color: var(--vv-ink);
     background: #f8f9fa;
 }
 
 .file-upload-btn.disabled {
-    background: #d0d0d0;
+    background: #d5d9df;
     cursor: not-allowed;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
 }
 
 .file-input {
@@ -480,7 +482,7 @@ tbody tr:hover {
 .file-name {
     margin-top: 8px;
     font-size: 13px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
 }
 
 .confirmation-modal {
@@ -516,7 +518,7 @@ tbody tr:hover {
 
 .confirmation-message {
     font-size: 18px;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-bottom: 30px;
     font-weight: 600;
 }
@@ -538,12 +540,12 @@ tbody tr:hover {
 }
 
 .confirmation-btn-no {
-    background: #95a5a6;
+    background: #8b919b;
     color: white;
 }
 
 .confirmation-btn-yes {
-    background: #003f5c;
+    background: var(--vv-red);
     color: white;
 }
 
@@ -552,7 +554,7 @@ tbody tr:hover {
     width: 200px;
     margin: 30px auto 0;
     padding: 15px 40px;
-    background: #003f5c;
+    background: var(--vv-red);
     color: white;
     border: none;
     border-radius: 8px;
@@ -564,7 +566,7 @@ tbody tr:hover {
 }
 
 .update-btn:hover {
-    background: #002d42;
+    background: var(--vv-red-dark);
 }
 
 @media (max-width: 768px) {
@@ -608,24 +610,64 @@ tbody tr:hover {
 .filter-label {
     font-size: 15px;
     font-weight: 500;
-    color: #2c3e50;
+    color: var(--vv-text);
     white-space: nowrap;
 }
 
 .filter-select {
     padding: 10px 30px 10px 15px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     border-radius: 10px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
     background: white;
-    color: #2c3e50;
+    color: var(--vv-text);
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 150px;
 }
 
+/* ========== Narrow screens (tablets and phones) ========== */
+
+@media (max-width: 768px) {
+    .search-and-filter {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .search-container {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    .user-details-modal {
+        width: calc(100vw - 24px);
+        max-height: calc(100dvh - 24px);
+    }
+
+    .modal-header {
+        padding: 22px 52px 14px 18px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .close-btn {
+        top: 12px;
+        right: 10px;
+    }
+
+    .modal-body {
+        padding: 18px 16px 22px;
+    }
+
+    .update-btn {
+        width: 100%;
+    }
+}
+
 .filter-select:focus {
     outline: none;
-    border-color: #003f5c;
+    border-color: var(--vv-ink);
 }

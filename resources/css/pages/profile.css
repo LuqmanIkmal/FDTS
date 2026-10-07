@@ -1,3 +1,5 @@
+@import '../theme.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f5f5f5;
+    background: var(--vv-page);
     display: flex;
     max-height: 100vh;
 }
@@ -29,7 +31,7 @@ body {
 
 .header h1 {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-weight: 600;
 }
 
@@ -40,14 +42,14 @@ body {
 }
 
 .user-info { text-align: right; }
-.user-name { font-weight: 600; color: #2c3e50; font-size: 16px; }
-.user-role { font-size: 13px; color: #7f8c8d; }
+.user-name { font-weight: 600; color: var(--vv-text); font-size: 16px; }
+.user-role { font-size: 13px; color: var(--vv-text-muted); }
 
 .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: #d5d9df;
 }
 
 .user-avatar img {
@@ -78,7 +80,7 @@ body {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: #d5d9df;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +97,7 @@ body {
 .profile-greeting {
     font-size: 20px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-top: 15px;
 }
 
@@ -114,7 +116,7 @@ body {
 .info-title {
     font-size: 24px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-bottom: 30px;
 }
 
@@ -136,28 +138,28 @@ body {
 .info-label {
     font-size: 14px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-bottom: 8px;
 }
 
 .info-value {
     padding: 12px 16px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     border-radius: 8px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
-    color: #2c3e50;
+    color: var(--vv-text);
     background: white;
     transition: all 0.3s ease;
 }
 
 .info-value:focus {
     outline: none;
-    border-color: #003f5c;
+    border-color: var(--vv-ink);
 }
 
 .info-value:read-only {
-    background: #f5f5f5;
+    background: var(--vv-page);
 }
 
 /* Password field with toggle */
@@ -206,7 +208,7 @@ body {
 
 .change-password-link {
     display: inline-block;
-    color: #003f5c;
+    color: var(--vv-red);
     font-size: 14px;
     text-decoration: underline;
     cursor: pointer;
@@ -214,12 +216,12 @@ body {
 }
 
 .change-password-link:hover {
-    color: #002d42;
+    color: var(--vv-red-dark);
 }
 
 .cancel-password-link {
     display: none;
-    color: #003f5c;
+    color: var(--vv-red);
     font-size: 14px;
     text-decoration: underline;
     cursor: pointer;
@@ -231,7 +233,7 @@ body {
 }
 
 .cancel-password-link:hover {
-    color: #002d42;
+    color: var(--vv-red-dark);
 }
 
 /* Hidden Re-confirm Password Field */
@@ -257,7 +259,7 @@ body {
 
 /* Error message for password mismatch */
 .error-message {
-    color: #e74c3c;
+    color: #d92d20;
     font-size: 13px;
     margin-top: 5px;
     display: none;
@@ -276,9 +278,9 @@ body {
 .file-upload-btn {
     padding: 6px 16px;
     background: white;
-    color: #2c3e50;
+    color: var(--vv-text);
     border-radius: 8px;
-    border: 2px solid #d0d0d0;
+    border: 2px solid #d5d9df;
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
@@ -293,7 +295,7 @@ body {
 }
 
 .file-upload-btn:hover {
-    border-color: #003f5c;
+    border-color: var(--vv-ink);
     background: #f8f9fa;
 }
 
@@ -303,7 +305,7 @@ body {
 
 .file-info {
     font-size: 13px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
 }
 
 .file-input {
@@ -318,7 +320,7 @@ body {
 
 .btn-update {
     padding: 10px 30px;
-    background: #003f5c;
+    background: var(--vv-red);
     color: white;
     border: none;
     border-radius: 8px;
@@ -330,13 +332,13 @@ body {
 }
 
 .btn-update:hover {
-    background: #002d42;
+    background: var(--vv-red-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 63, 92, 0.3);
+    box-shadow: 0 4px 12px rgba(191, 30, 46, 0.3);
 }
 
 .btn-update:disabled {
-    background: #95a5a6;
+    background: #8b919b;
     cursor: not-allowed;
     transform: none;
 }
@@ -347,7 +349,7 @@ body {
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    background: #80cbc4;
+    background: #e6f4ec;
     color: white;
     padding: 15px 40px;
     border-radius: 8px;
@@ -425,7 +427,7 @@ body {
 
 .modal-message {
     font-size: 18px;
-    color: #2c3e50;
+    color: var(--vv-text);
     margin-bottom: 30px;
     font-weight: 600;
 }
@@ -448,21 +450,21 @@ body {
 }
 
 .modal-btn-no {
-    background: #95a5a6;
+    background: #8b919b;
     color: white;
 }
 
 .modal-btn-no:hover {
-    background: #7f8c8d;
+    background: var(--vv-text-muted);
 }
 
 .modal-btn-yes {
-    background: #003f5c;
+    background: var(--vv-red);
     color: white;
 }
 
 .modal-btn-yes:hover {
-    background: #002d42;
+    background: var(--vv-red-dark);
 }
 
 @media (max-width: 1024px) {
@@ -482,5 +484,30 @@ body {
 
     .info-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+@media (max-width: 600px) {
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-right {
+        margin-top: 24px;
+    }
+
+    .info-card {
+        padding: 22px 16px;
+    }
+
+    .info-title {
+        font-size: 20px;
+    }
+
+    .btn-container .btn-update {
+        width: 100%;
     }
 }

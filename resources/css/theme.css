@@ -1,0 +1,13 @@
+/* Vista Velocity colours. Every stylesheet imports this file, so a colour changed here
+   changes on every page. --vv-red and --vv-ink are the two colours of the logo. */
+:root {
+    --vv-red: #bf1e2e;          /* logo red: main buttons, links, active states */
+    --vv-red-dark: #9d1826;     /* hover and pressed */
+    --vv-red-soft: #fbeced;     /* light red backgrounds */
+    --vv-ink: #14171c;          /* logo black, softened: sidebar, dark buttons, headings */
+    --vv-ink-soft: #262b33;     /* hover on dark surfaces */
+    --vv-text: #1f242b;         /* body text */
+    --vv-text-muted: #6b7280;   /* secondary text */
+    --vv-line: #e2e5ea;         /* borders and dividers */
+    --vv-page: #f4f5f7;         /* page background */
+}

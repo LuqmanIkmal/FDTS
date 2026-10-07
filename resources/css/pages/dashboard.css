@@ -1,20 +1,22 @@
+@import '../theme.css';
+
 :root {
-    --page:           #f5f5f5;
+    --page:           var(--vv-page);
     --surface:        #ffffff;
-    --text-primary:   #1f2d3a;
+    --text-primary:   var(--vv-text);
     --text-secondary: #52514e;
     --text-muted:     #898781;
     --gridline:       #eceae4;
     --baseline:       #c3c2b7;
     --hairline:       #e3e3e0;
-    --brand:          #0c373f;
-    --brand-accent:   #ff9a5a;
+    --brand:          var(--vv-ink);
+    --brand-accent:   var(--vv-red);
 
     /* Chart colours (validated categorical slots 1-2) */
-    --series-1:       #2a78d6;   /* Free FD */
-    --series-2:       #eb6834;   /* Pledge FD */
+    --series-1:       #3a6ea5;   /* Free FD */
+    --series-2:       #bf1e2e;   /* Pledge FD */
     --series-other:   #898781;
-    --single-series:  #2f6f7a;   /* one-series charts (bank principal, status mix) */
+    --single-series:  #3a6ea5;   /* one-series charts (bank principal, status mix) */
 
     /* Status colours: always shown with an icon + label */
     --status-good:     #0ca30c;
@@ -58,7 +60,7 @@ body {
 
 .header h1 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-weight: 600;
 }
 
@@ -74,20 +76,20 @@ body {
 
 .user-name {
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--vv-text);
     font-size: 16px;
 }
 
 .user-role {
     font-size: 13px;
-    color: #7f8c8d;
+    color: var(--vv-text-muted);
 }
 
 .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #d0d0d0;
+    background: #d5d9df;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +143,7 @@ body {
 .db-field select {
     min-width: 150px;
     padding: 8px 12px;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #d5d9df;
     border-radius: 8px;
     background: white;
     font: inherit;
@@ -169,7 +171,7 @@ body {
 
 .db-btn {
     padding: 8px 14px;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #d5d9df;
     border-radius: 8px;
     background: white;
     font: inherit;
@@ -189,7 +191,7 @@ body {
 }
 
 .db-btn.primary:hover {
-    background: #134a54;
+    background: var(--vv-ink-soft);
 }
 
 .db-chips {
@@ -208,9 +210,9 @@ body {
     align-items: center;
     gap: 6px;
     padding: 4px 10px;
-    border: 1px solid #cfd8da;
+    border: 1px solid #d5d9df;
     border-radius: 999px;
-    background: #eef4f5;
+    background: var(--vv-red-soft);
     font: inherit;
     font-size: 13px;
     color: var(--brand);
@@ -297,7 +299,7 @@ body {
 
 .db-kpi.hero .db-kpi-label,
 .db-kpi.hero .db-kpi-sub {
-    color: #cfe0e3;
+    color: #c9cdd4;
 }
 
 .db-kpi-value {
@@ -439,7 +441,7 @@ body {
 }
 
 .db-status-row.selected {
-    background: #eef4f5;
+    background: var(--vv-red-soft);
 }
 
 .db-status-name {
@@ -517,7 +519,7 @@ body {
 }
 
 .db-bank-row.selected {
-    background: #eef4f5;
+    background: var(--vv-red-soft);
 }
 
 .db-sort {
@@ -628,5 +630,42 @@ th[aria-sort] .db-sort .arrow {
 
     .db-filter-actions {
         margin-left: 0;
+    }
+}
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+/* Phones: two filters per row. The bar is too tall here to stay fixed at the top while
+   scrolling (it covered a third of the screen), so it scrolls away with the page. */
+@media (max-width: 640px) {
+    .dashboard-content {
+        padding: 12px;
+        gap: 14px;
+    }
+
+    .db-filters {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 12px;
+        padding: 14px;
+    }
+
+    .db-field select {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .db-filter-actions,
+    .db-chips {
+        grid-column: 1 / -1;
+    }
+
+    .db-filter-actions {
+        justify-content: space-between;
+    }
+
+    .db-kpis {
+        gap: 12px;
     }
 }

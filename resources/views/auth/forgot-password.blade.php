@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Forgot Password - Fixed Deposit Tracking System</title>
+  <link rel="icon" type="image/png" href="{{ asset('images/vv-favicon.png') }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +20,11 @@
     <!-- LEFT PANEL -->
     <div class="left-panel">
       <div class="logo">
-        <img src="{{ asset('images/Logo.png') }}" alt="Infra Desa Johor Logo">
+        <img src="{{ asset('images/vv-logo-white.png') }}" alt="Vista Velocity">
       </div>
 
       <div class="system-title">
-        <h1>Fixed<br>Deposit<br>Tracking<br>System</h1>
+        <h1>Fixed <br>Deposit <br>Tracking <br>System</h1>
       </div>
     </div>
 

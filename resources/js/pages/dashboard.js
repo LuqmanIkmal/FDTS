@@ -466,7 +466,13 @@ import Chart from 'chart.js/auto';
                         color: cssVar('--text-secondary'),
                         callback: function (v, i) {
                             var s = this.getLabelForValue(v);
-                            return s.length > 18 ? s.slice(0, 17) + '…' : s;
+                            if (s.length > 18) s = s.slice(0, 17) + '…';
+                            // This axis gets at most half of the width left of the bar labels (118px).
+                            // On a phone a long bank name does not fit there on one line and was cut
+                            // off at the left, so it is split over two lines at a space.
+                            var fits = Math.floor(((this.chart.width - 118) / 2 - 12) / 6.4); // about 6.4px per letter
+                            var cut = s.lastIndexOf(' ', fits);
+                            return s.length > fits && cut > 0 ? [s.slice(0, cut), s.slice(cut + 1)] : s;
                         }
                     }
                 }

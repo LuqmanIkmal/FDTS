@@ -222,7 +222,7 @@ function showUserError(message) {
     if (!errEl) {
         errEl = document.createElement('div');
         errEl.id = 'userFormError';
-        errEl.style.cssText = 'color:#c0392b; background:#fdecea; padding:10px 15px; border-radius:8px; font-size:14px; margin-bottom:10px;';
+        errEl.style.cssText = 'color:#a51a28; background:#fdecea; padding:10px 15px; border-radius:8px; font-size:14px; margin-bottom:10px;';
         const form = document.getElementById('userDetailsForm');
         if (form) form.insertBefore(errEl, form.firstChild);
     }

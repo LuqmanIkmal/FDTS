@@ -52,7 +52,7 @@ function showFieldError(fieldId, message) {
     if (!errEl) {
         errEl = document.createElement('div');
         errEl.id = fieldId + 'Error';
-        errEl.style.cssText = 'color:#e74c3c; font-size:13px; margin-top:4px;';
+        errEl.style.cssText = 'color:#d92d20; font-size:13px; margin-top:4px;';
         field.parentNode.appendChild(errEl);
     }
     errEl.textContent = message;
