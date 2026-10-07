@@ -145,7 +145,7 @@
                 <div class="print-footer">
                     <p><strong id="printDate">Report Generated:</strong></p>
                     <p><strong>Prepared By:</strong> Nor Azlina (Senior Finance Manager)</p>
-                    <p><strong>Organization:</strong> Infra Desa Johor</p>
+                    <p><strong>Organization:</strong> Vista Velocity</p>
                 </div>
             </div>
         </div>

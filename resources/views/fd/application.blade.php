@@ -31,7 +31,7 @@
                     @endif
                     
                     <div class="document-container" id="printable-content">
-                        <div class="ref-line">Our Ref.<span style="margin-left: 2em;">:</span><span style="margin-left: 1.5em;">IDJSB/HO/FCA/L-FD/2025</span></div>
+                        <div class="ref-line">Our Ref.<span style="margin-left: 2em;">:</span><span style="margin-left: 1.5em;">VVSB/HO/FCA/L-FD/2025</span></div>
                         <div class="ref-line">Date<span style="margin-left: 3.2em;">:</span><span style="margin-left: 1.5em;" id="docDate"></span></div>
 
                         <div class="doc-section">
@@ -76,7 +76,7 @@
                             <tr>
                                 <td class="label">Name</td>
                                 <td class="colon">:</td>
-                                <td>INFRA DESA (JOHOR) SDN BHD</td>
+                                <td>VISTA VELOCITY SDN BHD</td>
                             </tr>
                             <tr>
                                 <td class="label">Bank</td>
@@ -96,7 +96,7 @@
 
                         <div class="signature-area">
                             <div>Yours faithfully,</div>
-                            <div class="bold">INFRA DESA (JOHOR) SDN. BHD.</div>
+                            <div class="bold">VISTA VELOCITY SDN. BHD.</div>
                         </div>
 
                         <div class="signature-lines">
