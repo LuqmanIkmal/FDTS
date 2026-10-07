@@ -23,14 +23,44 @@ npm run dev                     # in a second terminal: serves resources/css and
 
 `npm run dev` must stay running while you work. To run without it, build the files once with `npm run build`.
 
+To fill the dashboard, lists and reports with sample banks and fixed deposits (for a demo or screenshots):
+
+```bash
+php artisan db:seed --class=DemoAccountsSeeder    # two demo logins, see below
+php artisan db:seed --class=DemoDataSeeder        # sample FDs; run again to refresh their dates
+php artisan db:seed --class=RemoveDemoDataSeeder  # remove the sample FDs
+```
+
+- The demo logins are `norazlina@vvsb.com` (Senior Finance Manager) and `exec@vvsb.com` (Finance Executive), both with
+  password `123`. That password is public, so change it or skip this seeder on a site other people can reach.
+- The sample FDs have a referral number starting with `DEMO` and need one staff account to exist first.
+
 Run the tests with `php artisan test`.
+
+## CSS, JavaScript and Vite
+
+The Blade views hold only HTML. Their styles and scripts live under `resources/` and are built by Vite:
+
+| File | Used by |
+|---|---|
+| `resources/css/pages/<view>.css`, `resources/js/pages/<view>.js` | The view with the same path, e.g. `fd/index.css` and `fd/index.js` belong to `resources/views/fd/index.blade.php` |
+| `resources/css/app.css`, `resources/js/app.js` | Every signed-in page (sidebar styles and menu toggle) |
+| `resources/images/` | Images referenced from CSS (login and sign-up backgrounds) |
+
+- Each view loads its files with `@vite([...])` in its `<head>`.
+- A script cannot contain Blade code. Values that come from Laravel (routes, data, image paths) are set in a small
+  `window.pageData = {...}` block at the bottom of the view, and the script reads them from there.
+- Functions called from `onclick="..."` attributes are listed in `Object.assign(window, {...})` at the end of the script.
+  Add new ones to that list, otherwise the click does nothing.
+- A new file under `resources/css/pages` or `resources/js/pages` is picked up automatically; add it to the view's `@vite([...])` list.
+- Images used with `asset('images/...')` in Blade stay in `public/images/`.
 
 ## Deploy to Hostinger (Business plan)
 
 1. **hPanel → Advanced → PHP Configuration**: choose PHP 8.2 or newer and make sure `bcmath` and `fileinfo` are enabled.
 2. **hPanel → Databases → MySQL Databases**: create a database and user. Note the database name, user and password.
-3. **Build the CSS/JS on your own computer** with `npm run build`. This writes `public/build/`, which the
-   signed-in pages need. The server does not need Node.
+3. **Build the CSS/JS on your own computer** with `npm run build`. This writes `public/build/`, which every
+   page needs. The server does not need Node.
 4. **Upload the project** (everything except `vendor/`, `node_modules/`, `public/hot` and `.env`) into
    `domains/<your-domain>/public_html/` using File Manager or Git. The `.htaccess` in the project root sends
    all traffic into `public/`, so `.env`, `storage/` and the code are not reachable from the web.
