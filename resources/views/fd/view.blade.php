@@ -110,7 +110,7 @@
                 <!-- Row 2: Details -->
                 <div class="section-box full-width" style="margin-bottom: 25px;">
                     <div class="section-title">Fixed Deposit Details</div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="two-col">
                         <div>
                             <div class="form-row">
                                 <label>Bank</label>
@@ -199,7 +199,7 @@
                         <div class="section-title">Fixed Deposit Transaction</div>
                         
                         <!-- Balance Summary for Matured FDs -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; margin-bottom: 15px;">
+                        <div class="two-col" style="gap: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; margin-bottom: 15px;">
                             <div>
                                 <div style="font-size: 12px; color: #666; margin-bottom: 5px;">💰 Remaining Balance</div>
                                 <div style="font-size: 15px; font-weight: 600; color: #1a4d5e;">

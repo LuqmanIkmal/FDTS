@@ -30,7 +30,7 @@
                 <img src="{{ asset('images/Logo.png') }}" alt="Infra Desa Johor Logo">
             </div>
             <div class="system-title">
-                <h1>Fixed Deposit<br>Tracking System</h1>
+                <h1>Fixed Deposit <br>Tracking System</h1>
             </div>
             <div class="system-description">
                 <p>A digital platform designed to simplify fixed deposit tracking and monitoring.</p>

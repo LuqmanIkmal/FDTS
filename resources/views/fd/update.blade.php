@@ -153,7 +153,7 @@
                     <!-- Row 2: Details -->
                     <div class="section-box full-width" style="margin-bottom: 25px;">
                         <div class="section-title">Fixed Deposit Details</div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="two-col">
                             <div>
                                 <div class="form-row">
                                     <label>Bank</label>
@@ -214,7 +214,7 @@
                             
                             <!-- Balance Information Display -->
                             <div style="background: #f0f8ff; border: 1px solid #b3d9ff; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="two-col">
                                     <div>
                                         <div style="font-size: 12px; color: #666; margin-bottom: 5px;">💰 Remaining Balance</div>
                                         <div style="font-size: 15px; font-weight: 600; color: #1a4d5e;">

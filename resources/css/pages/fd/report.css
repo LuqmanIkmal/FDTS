@@ -500,3 +500,26 @@ tbody tr:hover {
         margin-left: 0;
     }
 }
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+@media (max-width: 600px) {
+    .filter-container {
+        padding: 28px 18px;
+        margin: 12px auto;
+    }
+
+    .filter-title {
+        font-size: 22px;
+    }
+
+    .filter-form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .btn-filter {
+        width: 100%;
+        padding: 14px 20px;
+    }
+}

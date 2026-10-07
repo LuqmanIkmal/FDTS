@@ -629,3 +629,43 @@ tbody tr:hover {
     outline: none;
     border-color: #003f5c;
 }
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+@media (max-width: 768px) {
+    .search-and-filter {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .search-container {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    .user-details-modal {
+        width: calc(100vw - 24px);
+        max-height: calc(100dvh - 24px);
+    }
+
+    .modal-header {
+        padding: 22px 52px 14px 18px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .close-btn {
+        top: 12px;
+        right: 10px;
+    }
+
+    .modal-body {
+        padding: 18px 16px 22px;
+    }
+
+    .update-btn {
+        width: 100%;
+    }
+}

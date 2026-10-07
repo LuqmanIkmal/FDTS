@@ -54,6 +54,11 @@ The Blade views hold only HTML. Their styles and scripts live under `resources/`
   Add new ones to that list, otherwise the click does nothing.
 - A new file under `resources/css/pages` or `resources/js/pages` is picked up automatically; add it to the view's `@vite([...])` list.
 - Images used with `asset('images/...')` in Blade stay in `public/images/`.
+- **Small screens and the sidebar.** The menu button in the header opens and closes the sidebar. On screens wider than
+  1024px the sidebar sits beside the page and the choice is remembered; at 1024px and below it slides over the page.
+  That limit is written in two places that must match: `resources/css/app.css` and `resources/js/app.js`.
+  The rules every signed-in page shares (sidebar, header, spacing, tables that scroll sideways, pop-ups) are at the end of
+  `resources/css/app.css`; a page's own tablet and phone rules are at the end of its stylesheet under "Narrow screens".
 
 ## Deploy to Hostinger (Business plan)
 

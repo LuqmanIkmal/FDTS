@@ -379,3 +379,52 @@ body {
         print-color-adjust: exact;
     }
 }
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+@media (max-width: 1024px) {
+    /* "Back" above the letter instead of beside it */
+    .page-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-content > .back-button {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .document-wrapper {
+        padding: 14px 10px;
+    }
+
+    .document-container {
+        padding: 1cm 0.6cm;
+    }
+
+    .info-table {
+        width: 100%;
+    }
+
+    .signature-lines {
+        gap: 1.5em;
+        margin-top: 3.5em;
+    }
+
+    .sig-line {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .form-actions .btn {
+        flex: 1 1 140px;
+        padding: 14px 20px;
+    }
+}

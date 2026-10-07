@@ -345,3 +345,93 @@ input.error {
         width: 100%;
     }
 }
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+@media (max-width: 968px) {
+    body {
+        max-height: none;
+    }
+
+    .container {
+        padding: 18px 16px 36px;
+        align-items: stretch;
+    }
+
+    /* logo and title side by side, description under them */
+    .left-panel {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+        padding: 8px 4px 0;
+    }
+
+    .logo {
+        flex: none;
+        width: 110px;
+        height: 70px;
+        margin: 0;
+    }
+
+    .system-title {
+        flex: 1;
+        min-width: 0;
+        margin-bottom: 0;
+    }
+
+    .system-title h1 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+
+    .system-title h1 br {
+        display: none;
+    }
+
+    .system-description {
+        flex: 0 0 100%;
+        max-width: none;
+        margin-top: 0;
+    }
+
+    .system-description p {
+        font-size: 1rem;
+    }
+
+    .right-panel {
+        min-height: 0;
+        padding: 30px 4px 0;
+    }
+
+    .form-header {
+        margin-bottom: 32px;
+    }
+
+    .form-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 84px;
+        height: 54px;
+    }
+
+    .system-title h1 {
+        font-size: 1.3rem;
+    }
+
+    .system-description p {
+        font-size: 0.92rem;
+    }
+
+    .form-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+}

@@ -6,7 +6,12 @@
 
 <!-- Header Section -->
 <div class="header">
-    <h1>{{ $pageTitle }}</h1>
+    <div class="header-title">
+        <button type="button" class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open or close the menu" aria-controls="sidebar">
+            <span></span><span></span><span></span>
+        </button>
+        <h1>{{ $pageTitle }}</h1>
+    </div>
     <div class="user-profile">
         <div class="user-info">
             <div class="user-name">{{ $headerUser?->staff_name ?? 'Guest' }}</div>

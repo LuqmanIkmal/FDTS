@@ -5,8 +5,17 @@
     $bankMenuOpen = request()->routeIs("banks.list", "banks.create");
 @endphp
 <!-- Sidebar Component -->
+<script>
+    // Keep the sidebar closed from the first paint if it was closed on the last page (wide screens)
+    try {
+        if (localStorage.getItem('sidebarCollapsed') === '1') document.documentElement.classList.add('sidebar-collapsed');
+    } catch (e) {}
+</script>
 
-<div class="sidebar">
+<div class="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+<div class="sidebar" id="sidebar">
+    <button type="button" class="sidebar-close" onclick="closeSidebar()" aria-label="Close the menu">&times;</button>
     <div class="logo-section">
         <div class="logo-icon">
             <img src="{{ asset('images/LogoWhite.png') }}" alt="Logo">

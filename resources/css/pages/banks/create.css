@@ -251,3 +251,11 @@ body {
 .confirmation-btn-yes:hover {
     background: #002d42;
 }
+
+/* ========== Narrow screens (tablets and phones) ========== */
+
+@media (max-width: 600px) {
+    .form-card {
+        padding: 26px 18px;
+    }
+}

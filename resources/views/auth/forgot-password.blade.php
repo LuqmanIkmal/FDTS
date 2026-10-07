@@ -23,7 +23,7 @@
       </div>
 
       <div class="system-title">
-        <h1>Fixed<br>Deposit<br>Tracking<br>System</h1>
+        <h1>Fixed <br>Deposit <br>Tracking <br>System</h1>
       </div>
     </div>
 
