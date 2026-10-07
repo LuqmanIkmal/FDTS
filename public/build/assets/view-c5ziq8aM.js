@@ -1,0 +1,1 @@
+var e=window.pageData;function t(){window.location.href=e.fdUpdateUrl}function n(){window.location.href=e.applicationUrl}document.addEventListener(`DOMContentLoaded`,function(){let e=document.getElementById(`fdDropdown`),t=document.getElementById(`fdNavItem`);e&&t&&(e.classList.add(`show`),t.classList.add(`open`))}),Object.assign(window,{editFD:t,viewApplicationForm:n});
